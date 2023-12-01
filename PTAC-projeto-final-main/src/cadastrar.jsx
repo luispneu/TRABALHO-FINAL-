@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import ima2 from './ima2.png';
 import './style.css';
 
-export default function Todo() {
+export default function cadastrar() {
   const listalocalstorage = JSON.parse(localStorage.getItem("lista")) || [];
   const [lista, setLista] = useState(listalocalstorage);
   const [id, setid] = useState(1);
-  const [herois, setHerois] = useState("");
-  const [poder, setPoder] = useState("");
+  const [canal, setCanal] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [url, setUrl] = useState("");
+  const [video, setVideo] = useState("");
 
   useEffect(() => {
     localStorage.setItem("lista", JSON.stringify(lista));
@@ -16,36 +16,19 @@ export default function Todo() {
 
   function salvar(e) {
     e.preventDefault();
-    setLista([...lista, { herois: herois, id: id, poder: poder }]);
+    setLista([...lista, { canal: canal, id: id, descricao: descricao, url: url, video: video }]);
     setid(id + 1);
   }
-
-  const remover = (id) => {
-    const listaAux = lista.filter((heroi) => heroi.id !== id);
-    setLista(listaAux);
-  };
-
   return (
-    <div className="peblou">
-      <h1>Herois</h1>
-      <Link to="/home">
-        <img src={ima2} alt="Imagem" width="100" height="50" />
-      </Link>
+    <div class="peblou">
+      <h1>Videos</h1>
       <form onSubmit={salvar}>
-        <input onChange={(e) => setHerois(e.target.value)} type="text" />
-        <input onChange={(e) => setPoder(e.target.value)} type="number" />
+        <input onChange={(e) => setCanal(e.target.value)} type="text" />
+        <input onChange={(e) => setDescricao(e.target.value)} type="text" />
+        <input onChange={(e)=> setVideo(e.target.value)} type="text/>"/>
+        <input onChange={(e)=> setUrl(e.target.value)} type="text/>"/>
         <button>Incrementar</button>
       </form>
-      {lista.map((heroi) => (
-        <Link to={`/detalhe/${heroi.id}`}>
-          <div key={heroi.id}>
-            <p>ID: { }</p>
-            <p>Herói: {heroi.herois}</p>
-            <p>Poder: {heroi.poder}</p>
-            <button onClick={() => remover(heroi.id)}>Apagar</button>
-          </div>
-        </Link>
-      ))}
     </div>
   );
 }
