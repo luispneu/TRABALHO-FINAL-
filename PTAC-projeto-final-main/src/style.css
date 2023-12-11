@@ -11,15 +11,15 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Arial, sans-serif;
-    color: #FFFFFF; /* Cor do texto para contrastar com o gradiente */
+    color: #FFFFFF; 
   }
   button {
-    margin-top: 20px; /* Ajuste a margem superior conforme necessário */
+    margin-top: 20px; 
     font-family: Arial, sans-serif;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #333; /* Cor de fundo do botão */
-    color: #FFF; /* Cor do texto do botão */
+    background-color: #333; 
+    color: #FFF; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
