@@ -30,12 +30,14 @@ export default function cadastrar() {
         <input onChange={(e) => setDescricao(e.target.value)} type="text" />
         <h2>Nome do video</h2>
         <input onChange={(e)=> setVideo(e.target.value)} type="text/>"/>
-        <h2                                                                                                                         >URL</h2>
+        <h2>url</h2>
         <input onChange={(e)=> setUrl(e.target.value)} type="text/>"/>
-        <button>Incrementar</button>
+        <br></br>
+        <button>Adicionar</button>
       </form>
     </div>
     <div>
+
     </div>
     </div>
   );
