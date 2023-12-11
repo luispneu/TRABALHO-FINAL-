@@ -10,8 +10,9 @@ export default function cadastrar() {
   const [url, setUrl] = useState("");
   const [video, setVideo] = useState("");
 
+
   useEffect(() => {
-    localStorage.setItem("lista", JSON.stringify(lista));
+    localStorage.setItem("lista", JSON.stringify(lista)); 
   }, [lista]);
 
   function salvar(e) {
