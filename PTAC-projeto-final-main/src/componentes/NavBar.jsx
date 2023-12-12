@@ -27,11 +27,13 @@ export default function NavBar() {
                   />
                 </h5>
                 <h2>
+                  <link to="/destaque">
                   <img
                     src="/img/pra-cima.png"
                     style={{ width: '45px', height: '40px', marginBottom: '15px' }}
                     alt="Ícone para cima"
                   />
+                  </link>
                 </h2>
                 <h3>
                   <Link to="/cadastrar">
