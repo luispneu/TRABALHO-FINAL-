@@ -4,7 +4,11 @@ h1{
     text-align: center;
 }
 body {
-    background: linear-gradient(to bottom, #0036fb, #0036fb, #0036fb, #0036fb);
+  background: -webkit-linear-gradient(left, #038C3E, #034159);
+  background: -moz-linear-gradient(left, #02735E,#02735E);
+  background: -ms-linear-gradient(left,#02735E, #02735E);
+  background: -o-linear-gradient(left, #02735E,#02735E);
+  background: linear-gradient(to right, #02735E, #02735E);
     margin: 0;  
     display: flex;
     align-items: center;
@@ -17,8 +21,8 @@ body {
     font-family: Arial, sans-serif;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #333; 
-    color: #FFF; 
+    background-color: #034159; 
+    color: #0CF25D; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
