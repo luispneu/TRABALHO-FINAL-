@@ -53,7 +53,7 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-      <h1 style={{ marginTop: '70px', paddingLeft: '20px' }}>Ben's Videos</h1>
+      <h1 style={{ marginTop: '70px', paddingLeft: '20px', fontFamily:'sans-serif',paddingTop:'15px'}}>Ben's Videos</h1>
     </div>
   );
 }
