@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import NavBar from "./componentes/NavBar";
 import './style.css';
 
 export default function cadastrar() {

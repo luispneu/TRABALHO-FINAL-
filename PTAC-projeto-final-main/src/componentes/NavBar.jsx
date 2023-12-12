@@ -27,7 +27,7 @@ export default function NavBar() {
                       style={{ width: '45px ', height: '40px', borderRadius: '50%', marginBottom: '15px' }}
                       alt="Botão Home"
                     />
-                  </Link>
+                    </Link>
                 </h5>
                 <h2>
                   <Link to="/destaque">

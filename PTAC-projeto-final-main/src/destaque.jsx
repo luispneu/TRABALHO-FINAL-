@@ -1,10 +1,12 @@
 import React from "react";
+import Navbar from "./componentes/NavBar";
 
 export default function Destaque() {
   const listalocalstorage = JSON.parse(localStorage.getItem("lista")) || [];
 
   return (
     <div>
+      <Navbar />
       {listalocalstorage.map((video) => (
         <div key={video.id}>
           <h1>canal: {video.canal}</h1>
