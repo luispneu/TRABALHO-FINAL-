@@ -1,8 +1,24 @@
 import React from "react";
+
 export default function Destaque() {
-    return (
-        <div>
-            
+  const listalocalstorage = JSON.parse(localStorage.getItem("lista")) || [];
+
+  return (
+    <div>
+      {listalocalstorage.map((video) => (
+        <div key={video.id}>
+          <h1>canal: {video.canal}</h1>
+          <h1>descricao: {video.descricao}</h1>
+          <h1>Url: {video.url}</h1>
+          <h1>video: {video.video}</h1>
+          <iframe
+            width="700"
+            height="400"
+            src={"https://www.youtube.com/embed/" + video.url.slice(-4)}
+            title="Rekoil | Ben 10 em Português Brasil | Cartoon Network"
+          ></iframe>
         </div>
-    );
+      ))}
+    </div>
+  );
 }
