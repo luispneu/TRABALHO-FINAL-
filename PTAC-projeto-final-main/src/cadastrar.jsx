@@ -12,7 +12,7 @@ export default function cadastrar() {
 
 
   useEffect(() => {
-    localStorage.setItem("lista", JSON.stringify(lista)); 
+    localStorage.setItem("lista", JSON.stringify(lista));
   }, [lista]);
 
   function salvar(e) {

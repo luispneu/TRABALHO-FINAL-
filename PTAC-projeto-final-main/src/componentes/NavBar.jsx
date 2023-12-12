@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function NavBar() {
@@ -20,20 +21,22 @@ export default function NavBar() {
             <div className="collapse" id="navbarToggleExternalContent" data-bs-theme="white">
               <div className="bg-white p-4">
                 <h5 className="text-body-emphasis h4">
-                  <img
-                    src="/img/botao-home.png"
-                    style={{ width: '45px ', height: '40px', borderRadius: '50%', marginBottom: '15px' }}
-                    alt="Botão Home"
-                  />
+                  <Link to="/">
+                    <img
+                      src="/img/botao-home.png"
+                      style={{ width: '45px ', height: '40px', borderRadius: '50%', marginBottom: '15px' }}
+                      alt="Botão Home"
+                    />
+                  </Link>
                 </h5>
                 <h2>
-                  <link to="/destaque">
-                  <img
-                    src="/img/pra-cima.png"
-                    style={{ width: '45px', height: '40px', marginBottom: '15px' }}
-                    alt="Ícone para cima"
-                  />
-                  </link>
+                  <Link to="/destaque">
+                    <img
+                      src="/img/pra-cima.png"
+                      style={{ width: '45px', height: '40px', marginBottom: '15px' }}
+                      alt="Ícone para cima"
+                    />
+                  </Link>
                 </h2>
                 <h3>
                   <Link to="/cadastrar">
