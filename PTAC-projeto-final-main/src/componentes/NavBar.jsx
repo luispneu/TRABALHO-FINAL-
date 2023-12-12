@@ -24,7 +24,7 @@ export default function NavBar() {
                   <Link to="/">
                     <img
                       src="/img/botao-home.png"
-                      style={{ width: '45px ', height: '40px', borderRadius: '50%', marginBottom: '15px' }}
+                      style={{ width: '45px ', height: '40px', borderRadius: '50%', marginBottom: '15px'  }}
                       alt="Botão Home"
                     />
                     </Link>

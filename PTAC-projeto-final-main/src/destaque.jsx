@@ -7,20 +7,46 @@ export default function Destaque() {
   return (
     <div>
       <Navbar />
-      {listalocalstorage.map((video) => (
-        <div key={video.id}>
-          <h1>canal: {video.canal}</h1>
-          <h1>descricao: {video.descricao}</h1>
-          <h1>Url: {video.url}</h1>
-          <h1>video: {video.video}</h1>
-          <iframe
-            width="700"
-            height="400"
-            src={"https://www.youtube.com/embed/" + video.url.slice(-4)}
-            title="Rekoil | Ben 10 em Português Brasil | Cartoon Network"
-          ></iframe>
-        </div>
-      ))}
+      <div style={styles.videoContainer}>
+        {listalocalstorage.map((video) => (
+          <div key={video.id} style={styles.videoCard}>
+            <h1 style={styles.videoTitle}>Canal: {video.canal}</h1>
+            <p style={styles.videoDescription}>Descrição: {video.descricao}</p>
+            <iframe
+              width="700"
+              height="400"
+              src={"https://www.youtube.com/embed/" + video.url.slice(-4)}
+              title="Rekoil | Ben 10 em Português Brasil | Cartoon Network"
+            ></iframe>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
+
+const styles = {
+  videoContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    marginTop: "20px",
+  },
+  videoCard: {
+    margin: "20px",
+    padding: "20px",
+    background: "#333",
+    borderRadius: "10px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    color: "#FFF",
+    textAlign: "left",
+  },
+  videoTitle: {
+    fontSize: "18px",
+    marginBottom: "10px",
+  },
+  videoDescription: {
+    fontSize: "14px",
+  },
+};

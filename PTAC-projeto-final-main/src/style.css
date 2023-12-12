@@ -27,3 +27,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
+input{
+  border-radius: 8px;
+}

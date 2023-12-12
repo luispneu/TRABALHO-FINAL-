@@ -24,28 +24,26 @@ export default function Cadastrar() {
   return (
     <div>
       <NavBar />
-      <div className="peblou">
-        <form onSubmit={salvar}>
+      <div style={styles.videoContainer}>
+        <form onSubmit={salvar} style={styles.videoCard}>
           <h2>Canal</h2>
           <input onChange={(e) => setCanal(e.target.value)} type="text" />
           <h2>Descrição</h2>
           <input onChange={(e) => setDescricao(e.target.value)} type="text" />
-          <h2>Nome do video</h2>
+          <h2>Nome do vídeo</h2>
           <input onChange={(e) => setVideo(e.target.value)} type="text" />
-          <h2>url</h2>
+          <h2>URL</h2>
           <input onChange={(e) => setUrl(e.target.value)} type="url" placeholder="https://example.com" pattern="https://.*" size="30" required />
           <br></br>
           <button>Adicionar</button>
         </form>
       </div>
 
-      <div>
+      <div style={styles.videoContainer}>
         {lista.map((video) => (
-          <div key={video.id}>
-            <h1>canal: {video.canal}</h1>
-            <h1>descrição: {video.descricao}</h1>
-            <h1>Url: {video.url}</h1>
-            <h1>video: {video.video}</h1>
+          <div key={video.id} style={styles.videoCard}>
+            <h1 style={styles.videoTitle}>Canal: {video.canal}</h1>
+            <p style={styles.videoDescription}>Descrição: {video.descricao}</p>
             <iframe
               width="600"
               height="400"
@@ -58,3 +56,29 @@ export default function Cadastrar() {
     </div>
   );
 }
+
+const styles = {
+  videoContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    marginTop: "20px",
+  },
+  videoCard: {
+    margin: "20px",
+    padding: "20px",
+    background: "#333",
+    borderRadius: "10px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    color: "#FFF",
+    textAlign: "left",
+  },
+  videoTitle: {
+    fontSize: "18px",
+    marginBottom: "10px",
+  },
+  videoDescription: {
+    fontSize: "14px",
+  },
+};
